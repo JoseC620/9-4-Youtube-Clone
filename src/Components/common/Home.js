@@ -1,6 +1,6 @@
 
 
-import { getAllVideos } from "../../Api(1)/fetch"
+import { getAllVideos } from "../../Api/fetch"
 import { useEffect, useState } from "react"
 
 
