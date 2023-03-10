@@ -1,0 +1,32 @@
+header {
+    align-items: center;
+    display: flex;
+    padding: 5px 5% 10px;
+    background-color: red;
+  }
+  
+ 
+  
+  header h1 {
+    height: auto;
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  header h1 span {
+    font-weight: 300;
+  }
+  
+  header h1 a {
+    color: var(--light);
+    text-decoration: none;
+  }
+
+  header ul a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 5 20px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: var(--dark);
+  }
