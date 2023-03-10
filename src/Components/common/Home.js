@@ -14,8 +14,8 @@ export default function Home() {
 
     useEffect(() => {
         getAllVideos(searchTerm).then((response) => {
-          console.log(response)
-          setVideos([response])
+          
+          
           setLoadingError(false)
         }).catch((error) => {
           setLoadingError(true)
