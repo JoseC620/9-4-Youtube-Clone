@@ -21,7 +21,6 @@ function App() {
       
       
 
-   YouTube APP
 
     </div>
   );
