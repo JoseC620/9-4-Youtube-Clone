@@ -7,6 +7,7 @@ import {Route, Routes, Router} from "react-router-dom"
 function App() {
   return (
     <div className="App">
+
     
         <Navbar />
         <Routes>
@@ -19,8 +20,12 @@ function App() {
         
       
       
+
+   YouTube APP
+
     </div>
   );
 }
 
 export default App;
+
