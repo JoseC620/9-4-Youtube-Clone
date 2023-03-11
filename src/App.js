@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Components/common/Navbar';
-import VideoListing from './Components/common/VideoListing';
+import VideoListing from './Components/Youtube/VideoListing';
 import About from './Components/common/About';
 import {Route, Routes, Router} from "react-router-dom"
 
