@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './Components/common/Footer';
 import Navbar from './Components/common/Navbar';
 import Home from './Components/common/Home';
 import About from './Components/common/About';
@@ -15,13 +16,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
 
-
+       
         </Routes>
+        <Footer />
         
       
       
-
-
     </div>
   );
 }
