@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Components/common/Navbar';
-import Home from './Components/common/Home';
+import VideoListing from './Components/common/VideoListing';
 import About from './Components/common/About';
 import {Route, Routes, Router} from "react-router-dom"
 
@@ -12,7 +12,8 @@ function App() {
         <Navbar />
         <Routes>
 
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path='/Videos' element={<VideoListing />}/>
         <Route path="/About" element={<About />} />
 
 
