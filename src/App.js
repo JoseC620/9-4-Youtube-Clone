@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './Components/common/Footer';
 import Navbar from './Components/common/Navbar';
 import VideoListing from './Components/Youtube/VideoListing';
 import About from './Components/common/About';
@@ -16,13 +17,12 @@ function App() {
         <Route path='/Videos' element={<VideoListing />}/>
         <Route path="/About" element={<About />} />
 
-
+       
         </Routes>
+        <Footer />
         
       
       
-
-
     </div>
   );
 }
