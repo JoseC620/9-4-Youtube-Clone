@@ -1,0 +1,13 @@
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    border: 0px;
+}
+
+.text {
+    width: 50px;
+}
+
+.thumbnail {
+    padding: 25px;
+}
