@@ -1,17 +1,13 @@
 
-
-
 import { getAllVideos } from "../../api/fetch"
 import { useEffect, useState } from "react"
 import './Home.css'
 
 export default function Home() {
 
-    // const [expanded, setExpanded] = useState(false);
     const [searchVisible, setSearchVisible] = useState(false);
-
     const [loadingError, setLoadingError] = useState(false)
-    const [searchTerm, setSearchTerm] = useState("surfing")
+    const [searchTerm, setSearchTerm] = useState("")
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
@@ -23,7 +19,6 @@ export default function Home() {
           setLoadingError(true)
         })
       }, [searchTerm])
-
 
 
       const handleSearchIconClick = () => {
@@ -41,7 +36,6 @@ export default function Home() {
         setSearchVisible(false);
       };
     
-
 
       return (
         <div className="home-container">
