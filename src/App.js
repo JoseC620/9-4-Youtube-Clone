@@ -6,21 +6,24 @@ import Home from './Components/home/Home';
 import About from './Components/about/About';
 import VideoIndex from './Components/Youtube/VideoIndex';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { useState } from 'react';
 
 function App() {
+
+  const [search, setSearch] = useState("")
+
+
+
   return (
     <div className="App">
 
     <Router>
         <Navbar />
         <Routes>
-
-        <Route path="/" element={<Home />} />
-        <Route path='/Videos' element={<VideoListing />}/>
+        <Route path="/" element={<Home  callback={setSearch} />} />
         <Route path="/About" element={<About />} />
         <Route path='/Videos/:id' element={<VideoIndex />} />
-
-       
+        <Route path='/Videos/search/:searchTerm' element={<VideoListing search={search}/>}/>
         </Routes>
         <Footer />
         

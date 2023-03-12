@@ -5,27 +5,30 @@ import { Link } from "react-router-dom"
 import "./VideoListing.css"
 
 
-export default function VideoListing() {
+export default function VideoListing({ search }) {
 
     
 
     const [loadingError, setLoadingError] = useState(false)
-    const [searchTerm, setSearchTerm] = useState("surfing")
-    const [videos, setVideos] = useState({})
 
-    // useEffect(() => {
-    //     getAllVideos(searchTerm).then((response) => {
-    //       console.log(response)
-    //       setVideos(response)
-    //       if (Object.keys(response).length === 0) {
-    //         setLoadingError(true)
-    //       } else {
-    //         setLoadingError(false)
-    //       }
-    //     }).catch((error) => {
-    //       setLoadingError(true)
-    //     })
-    //   }, [searchTerm])
+    const [videos, setVideos] = useState([])
+    console.log(search)
+
+    useEffect(() => {
+        getAllVideos(search).then((response) => {
+          console.log(response.items)
+          setVideos(response.items)
+          if (Object.keys(response).length === 0) {
+            setLoadingError(true)
+          } else {
+            setLoadingError(false)
+          }
+        }).catch((error) => {
+          setLoadingError(true)
+        })
+      }, [search])
+
+
 
 
     return (
