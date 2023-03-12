@@ -2,8 +2,8 @@ import './App.css';
 import Footer from './Components/common/Footer';
 import Navbar from './Components/common/Navbar';
 import VideoListing from './Components/Youtube/VideoListing';
-import Home from './Components/common/Home';
-import About from './Components/common/About';
+import Home from './Components/home/Home';
+import About from './Components/about/About';
 import {Route, Routes, Router} from "react-router-dom"
 
 function App() {
