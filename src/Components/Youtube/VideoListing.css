@@ -2,10 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     border: 0px;
+    justify-content: center;
+    
 }
 
 .text {
-    width: 50px;
+    width: 240px;
+    text-align: left;
+    padding-left: 30px;
+    margin-top: -20px;
 }
 
 .thumbnail {
