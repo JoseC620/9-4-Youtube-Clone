@@ -7,7 +7,7 @@ export default function Home({ callback }) {
 
     const [searchVisible, setSearchVisible] = useState(false);
     const [loadingError, setLoadingError] = useState(false)
-    const [searchTerm, setSearchTerm] = useState("surfing")
+    const [searchTerm, setSearchTerm] = useState("")
 
 
 
@@ -17,6 +17,9 @@ export default function Home({ callback }) {
       };
 
       const handleSearchInputChange = (event) => {
+        if(!event.target.value){
+          setSearchTerm("surfing")
+        } else 
         setSearchTerm(event.target.value);
       };
     
@@ -26,6 +29,7 @@ export default function Home({ callback }) {
         setSearchTerm('');
         setSearchVisible(false);
       };
+
     
 
       return (
