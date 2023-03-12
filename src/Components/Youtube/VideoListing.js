@@ -12,6 +12,10 @@ export default function VideoListing({ search }) {
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])
 
+    if (search === undefined){
+      search = "surfing"
+    }
+
     useEffect(() => {
         getAllVideos(search).then((response) => {
           console.log(response.items)
