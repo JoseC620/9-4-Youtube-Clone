@@ -1,4 +1,6 @@
 header {
+    position: fixed;
+    width: 100%;
     align-items: center;
     display: flex;
     padding: 5px 5% 0px;
