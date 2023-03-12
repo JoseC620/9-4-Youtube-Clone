@@ -11,12 +11,12 @@ export default function VideoListing() {
 
     const [loadingError, setLoadingError] = useState(false)
     const [searchTerm, setSearchTerm] = useState("surfing")
-    const [videos, setVideos] = useState({})
+    const [videos, setVideos] = useState([])
 
     useEffect(() => {
         getAllVideos(searchTerm).then((response) => {
-          console.log(response)
-          setVideos(response)
+          console.log(response.items)
+          setVideos(response.items)
           if (Object.keys(response).length === 0) {
             setLoadingError(true)
           } else {
@@ -35,7 +35,7 @@ export default function VideoListing() {
     return (
         
         <div className="videos">
-          {videos.items.map((video) => {
+          {videos.map((video) => {
             return (
               <div key={video.id.videoId}>
                 <Link>
