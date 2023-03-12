@@ -10,27 +10,20 @@ export default function Home({ callback }) {
     const [searchTerm, setSearchTerm] = useState("")
 
 
-
-
       const handleSearchIconClick = () => {
         setSearchVisible(!searchVisible);
       };
 
       const handleSearchInputChange = (event) => {
-        if(!event.target.value){
-          setSearchTerm("surfing")
-        } else 
         setSearchTerm(event.target.value);
       };
     
       const handleSearchFormSubmit = (e) => {
         e.preventDefault();
         console.log(searchTerm);
-        setSearchTerm('');
         setSearchVisible(false);
       };
 
-    
 
       return (
         <div className="home-container">
@@ -48,7 +41,7 @@ export default function Home({ callback }) {
                 value={searchTerm}
                 onChange={handleSearchInputChange}
               />
-              <Link to={`/Videos/Search/${searchTerm}`}>
+              <Link to={`/Videos/Search/${!searchTerm ? "surfing": searchTerm}`}>
               <button type="submit" onClick={() => callback(searchTerm)}>Go</button>
               </Link>
             </form>
