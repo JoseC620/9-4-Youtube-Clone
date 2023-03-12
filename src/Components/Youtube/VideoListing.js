@@ -27,7 +27,7 @@ export default function VideoListing({ search }) {
       }, [search])
 
 
-    
+    console.log(search)
 
 
 
