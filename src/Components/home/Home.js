@@ -1,14 +1,15 @@
 
 import { getAllVideos } from "../../api/fetch"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 import './Home.css'
 
-export default function Home() {
+export default function Home({ callback }) {
 
     const [searchVisible, setSearchVisible] = useState(false);
     const [loadingError, setLoadingError] = useState(false)
-    const [searchTerm, setSearchTerm] = useState("")
-    const [videos, setVideos] = useState([])
+    const [searchTerm, setSearchTerm] = useState("surfing")
+
 
     // useEffect(() => {
     //     getAllVideos(searchTerm).then((response) => {
@@ -53,7 +54,9 @@ export default function Home() {
                 value={searchTerm}
                 onChange={handleSearchInputChange}
               />
-              <button type="submit">Go</button>
+              <Link to={`/Videos/Search/${searchTerm}`}>
+              <button type="submit" onClick={() => callback(searchTerm)}>Go</button>
+              </Link>
             </form>
           </div>
         </div>

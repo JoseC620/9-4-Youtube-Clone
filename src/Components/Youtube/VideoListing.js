@@ -5,16 +5,16 @@ import { Link } from "react-router-dom"
 import "./VideoListing.css"
 
 
-export default function VideoListing() {
+export default function VideoListing({ search }) {
 
     
 
     const [loadingError, setLoadingError] = useState(false)
-    const [searchTerm, setSearchTerm] = useState("surfing")
     const [videos, setVideos] = useState([])
+    console.log(search)
 
     useEffect(() => {
-        getAllVideos(searchTerm).then((response) => {
+        getAllVideos(search).then((response) => {
           console.log(response.items)
           setVideos(response.items)
           if (Object.keys(response).length === 0) {
@@ -25,7 +25,7 @@ export default function VideoListing() {
         }).catch((error) => {
           setLoadingError(true)
         })
-      }, [searchTerm])
+      }, [search])
 
 
     
