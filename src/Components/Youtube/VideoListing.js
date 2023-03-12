@@ -10,9 +10,7 @@ export default function VideoListing({ search }) {
     
 
     const [loadingError, setLoadingError] = useState(false)
-
     const [videos, setVideos] = useState([])
-    console.log(search)
 
     useEffect(() => {
         getAllVideos(search).then((response) => {
@@ -29,16 +27,18 @@ export default function VideoListing({ search }) {
       }, [search])
 
 
+    
+
 
 
     return (
         
         <div className="videos">
-          {videos.items.map((video) => {
+          {videos.map((video) => {
             return (
               <div key={video.id.videoId}>
-                <Link>
-                <img src={video.snippet.thumbnails.default.url} alt="box" width="250px" className="thumbnail"></img>
+                <Link to="/Videos/{video.id.videoId}">
+                <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail"></img>
                 <h3 className="text">{video.snippet.title}</h3>
                 </Link>
               </div>
