@@ -10,15 +10,15 @@ export default function Home() {
     const [searchTerm, setSearchTerm] = useState("")
     const [videos, setVideos] = useState([])
 
-    useEffect(() => {
-        getAllVideos(searchTerm).then((response) => {
-          console.log(response)
+    // useEffect(() => {
+    //     getAllVideos(searchTerm).then((response) => {
+    //       console.log(response)
           
-          setLoadingError(false)
-        }).catch((error) => {
-          setLoadingError(true)
-        })
-      }, [searchTerm])
+    //       setLoadingError(false)
+    //     }).catch((error) => {
+    //       setLoadingError(true)
+    //     })
+    //   }, [searchTerm])
 
 
       const handleSearchIconClick = () => {
