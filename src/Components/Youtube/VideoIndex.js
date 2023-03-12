@@ -2,7 +2,7 @@
 
 export default function VideoIndex() {
 
-let id = window.location.pathname.substring(8)
+let id = window.location.pathname.substring(13)
 
 
     return (
