@@ -1,6 +1,5 @@
 
-import { getAllVideos } from "../../api/fetch"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom";
 import './Home.css'
 
@@ -11,15 +10,6 @@ export default function Home({ callback }) {
     const [searchTerm, setSearchTerm] = useState("surfing")
 
 
-    // useEffect(() => {
-    //     getAllVideos(searchTerm).then((response) => {
-    //       console.log(response)
-          
-    //       setLoadingError(false)
-    //     }).catch((error) => {
-    //       setLoadingError(true)
-    //     })
-    //   }, [searchTerm])
 
 
       const handleSearchIconClick = () => {
