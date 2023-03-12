@@ -34,7 +34,7 @@ export default function VideoListing({ search }) {
     return (
         
         <div className="videos">
-          {/* {videos.items.map((video) => {
+          {videos.items.map((video) => {
             return (
               <div key={video.id.videoId}>
                 <Link>
@@ -43,7 +43,7 @@ export default function VideoListing({ search }) {
                 </Link>
               </div>
             )
-          })} */}
+          })}
             
             </div>
     )
