@@ -2,8 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     border: 0px;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 
 .text {

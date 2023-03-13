@@ -1,12 +1,29 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./VideoIndex.css"
 import { Link } from "react-router-dom";
+import { getAllVideos } from "../../api/fetch";
 
 
 export default function VideoIndex() {
 
 const [searchTerm, setSearchTerm] = useState("");
+const [videos, setVideos] = useState([])
+const [loadingError, setLoadingError] = useState(false)
+
+useEffect(() => {
+  getAllVideos(searchTerm).then((response) => {
+    console.log(response.items)
+    setVideos(response.items)
+    if (Object.keys(response).length === 0) {
+      setLoadingError(true)
+    } else {
+      setLoadingError(false)
+    }
+  }).catch((error) => {
+    setLoadingError(true)
+  })
+}, [searchTerm])
 
 
 const handleSearchInputChange = (event) => {
@@ -70,6 +87,20 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
           <button className="button2" type="submit">Go</button>
         </Link>
       </form>
+      <section className="videoscroll">
+      {videos.map((video) => {
+            return (
+              <div key={video.id.videoId}>
+                  <br></br><br></br><br></br>
+                <Link to={`/Videos/play/${video.id.videoId}`}>
+
+                <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail"></img>
+                <h3 className="text">{video.snippet.title}</h3>
+                </Link>
+              </div>
+            )
+          })}
+      </section>
     </div>
            
 
@@ -78,7 +109,6 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
             <section className="stuff">
             <iframe src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
             </iframe>
-            
                 <ul className="comments">
                 {arrayOfComments.map((comment, index) => {
                     return (
