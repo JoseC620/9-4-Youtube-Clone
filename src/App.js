@@ -25,7 +25,7 @@ function App() {
         <Route path='/Videos/play/:id' element={<VideoIndex />} />
         <Route path='/Videos/search/:searchTerm' element={<VideoListing search={search}/>}/>
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
         
         </Router>
       
