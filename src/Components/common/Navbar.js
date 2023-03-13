@@ -11,7 +11,6 @@ export default function Navbar() {
               <div className="playBtn"></div>
             </div>
 
-
         <article>
           <h1>
             <Link to="/">
@@ -26,7 +25,6 @@ export default function Navbar() {
             </Link>
             </ul>
 
-            
       </header>
     )
 }

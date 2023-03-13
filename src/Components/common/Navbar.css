@@ -6,7 +6,6 @@ header {
     padding: 5px 5% 0px;
     background-color: red;
   }
-  
  
   header h1 {
     height: auto;
@@ -49,6 +48,3 @@ header {
     border-bottom: 12px solid transparent;
     border-left: 24px solid white;
   }
-
-
-  

@@ -1,5 +1,4 @@
 import './App.css';
-import Footer from './Components/common/Footer';
 import Navbar from './Components/common/Navbar';
 import VideoListing from './Components/Youtube/VideoListing';
 import Home from './Components/home/Home';
@@ -12,23 +11,17 @@ function App() {
 
   const [search, setSearch] = useState("")
 
-
-
   return (
     <div className="App">
-
     <Router>
         <Navbar />
-        <Routes>
-        <Route path="/" element={<Home  callback={setSearch} />} />
-        <Route path="/About" element={<About />} />
-        <Route path='/Videos/play/:id' element={<VideoIndex />} />
-        <Route path='/Videos/search/:searchTerm' element={<VideoListing search={search}/>}/>
-        </Routes>
-        {/* <Footer /> */}
-        
-        </Router>
-      
+          <Routes>
+            <Route path="/" element={<Home  callback={setSearch} />} />
+           <Route path="/About" element={<About />} />
+           <Route path='/Videos/play/:id' element={<VideoIndex />} />
+            <Route path='/Videos/search/:searchTerm' element={<VideoListing search={search}/>}/>
+          </Routes>
+    </Router>
     </div>
   );
 }

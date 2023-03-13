@@ -7,8 +7,6 @@ import "./VideoListing.css"
 
 export default function VideoListing({ search }) {
 
-    
-
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])
 
@@ -30,10 +28,7 @@ export default function VideoListing({ search }) {
         })
       }, [search])
 
-
     console.log(search)
-
-
 
     return (
         
@@ -50,7 +45,6 @@ export default function VideoListing({ search }) {
               </div>
             )
           })}
-            
             </div>
     )
 }
