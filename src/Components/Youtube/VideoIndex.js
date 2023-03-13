@@ -1,9 +1,23 @@
 
 import { useState } from "react";
 import "./VideoIndex.css"
+import { Link } from "react-router-dom";
 
 
 export default function VideoIndex() {
+
+const [searchTerm, setSearchTerm] = useState("");
+
+
+const handleSearchInputChange = (event) => {
+  setSearchTerm(event.target.value);
+};
+
+const handleSearchFormSubmit = (e) => {
+  e.preventDefault();
+  console.log(searchTerm);
+};
+
 
 
 let id = window.location.pathname.substring(13)
@@ -42,14 +56,32 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
 
 
     return (
+
+      <>
+      <div className="search-container">
+      <form onSubmit={handleSearchFormSubmit}>
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleSearchInputChange}
+        />
+        <Link to={`/Videos/Search/${!searchTerm ? "surfing": searchTerm}`}>
+          <button type="submit">Go</button>
+        </Link>
+      </form>
+    </div>
+    
+
         <div id="player">
+          <br></br><br></br>
             <section className="stuff">
             <iframe src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
             </iframe>
                 <ul className="comments">
-                {arrayOfComments.map((comment) => {
+                {arrayOfComments.map((comment, index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             {comment}
                             <aside className="opinion">
                             {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
@@ -64,5 +96,6 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
             </section>
            
         </div>
+        </>
     )
 }
