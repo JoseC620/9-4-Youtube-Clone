@@ -1,8 +1,9 @@
 .videoplayer {
-   margin-top: 40px;
-   width: 600px;
+  margin-top: -20px;
+   width: 640px;
    height: 350px;
-   margin-left: 100px;
+   margin-left: 80px;
+
 }
 
 body {
@@ -14,18 +15,19 @@ body {
     column-gap: 15px;
 }
 
-.search-container {
+.search-container2 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
   
-  form {
+  .form2 {
     display: flex;
     align-items: center;
+    margin-top: 90px;
   }
   
-  input[type="text"] {
+  .input2[type="text"] {
     width: 300px;
     height: 30px;
     padding: 5px;
@@ -34,7 +36,7 @@ body {
     border-radius: 5px 0 0 5px;
   }
   
-  button[type="submit"] {
+  .button2[type="submit"] {
     height: 30px;
     padding: 5px 10px;
     background-color: #4CAF50;
@@ -44,7 +46,11 @@ body {
     cursor: pointer;
   }
   
-  button[type="submit"]:hover {
+  .button2[type="submit"]:hover {
     background-color: #45a049;
   }
   
+
+  .comments {
+    margin-left: 60px;
+  }

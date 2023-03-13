@@ -56,28 +56,29 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
 
 
     return (
-
-      <>
-      <div className="search-container">
-      <form onSubmit={handleSearchFormSubmit}>
+<>
+      <div className="search-container2">
+      <form onSubmit={handleSearchFormSubmit} className="form2">
         <input
+          className="input2"
           type="text"
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchInputChange}
         />
         <Link to={`/Videos/Search/${!searchTerm ? "surfing": searchTerm}`}>
-          <button type="submit">Go</button>
+          <button className="button2" type="submit">Go</button>
         </Link>
       </form>
     </div>
-    
+           
 
         <div id="player">
           <br></br><br></br>
             <section className="stuff">
             <iframe src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
             </iframe>
+            
                 <ul className="comments">
                 {arrayOfComments.map((comment, index) => {
                     return (
@@ -94,7 +95,6 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
                 })}
                 </ul>
             </section>
-           
         </div>
         </>
     )
