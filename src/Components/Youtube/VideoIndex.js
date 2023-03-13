@@ -3,14 +3,10 @@ import { useState } from "react";
 import "./VideoIndex.css"
 
 
-
-
 export default function VideoIndex() {
 
 
-
 let id = window.location.pathname.substring(13)
-
 let arrayOfComments = []
 
 const names = ["John Doe", "Jane Smith", "Bob Johnson", "Mary Brown"]; 
@@ -32,7 +28,6 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
     count2 = 1
   }
   
-
   const numComments = 10; 
   for (let i = 0; i < numComments; i++) { 
     const comment = generateRandomComment();
