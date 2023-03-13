@@ -1,7 +1,7 @@
 
 import { getAllVideos } from "../../api/fetch"
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useState  } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import "./VideoListing.css"
 
 
@@ -9,6 +9,19 @@ export default function VideoListing({ search }) {
 
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const navigate = useNavigate()
+
+
+const handleSearchInputChange = (event) => {
+  setSearchTerm(event.target.value);
+};
+
+const handleSearchFormSubmit = (e) => {
+  e.preventDefault();
+  console.log(searchTerm);
+};
 
     if (search === undefined){
       search = "surfing"
@@ -31,8 +44,26 @@ export default function VideoListing({ search }) {
     console.log(search)
 
     return (
+
+
+      <>
+      <div className="search-container2">
+      <form onSubmit={handleSearchFormSubmit} className="form2">
+        <input
+          className="input2"
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleSearchInputChange}
+        />
+        <Link to={`/Videos/Search/${!searchTerm ? "surfing": searchTerm}`}>
+          <button className="button2" type="submit">Go</button>
+        </Link>
+      </form>
+    </div>
         
         <div className="videos">
+          
           {videos.map((video) => {
             return (
               <div key={video.id.videoId}>
@@ -46,5 +77,6 @@ export default function VideoListing({ search }) {
             )
           })}
             </div>
+            </>
     )
 }

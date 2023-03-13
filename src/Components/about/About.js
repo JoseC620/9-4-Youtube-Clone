@@ -1,7 +1,9 @@
 
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./About.css";
+
 
 
 export default function About() {
@@ -22,6 +24,7 @@ export default function About() {
 
 
     return (
+
         <div className="about-container">
           <div className="about">
             <h1>About Our Project</h1>
@@ -77,6 +80,7 @@ export default function About() {
               ))}
             </div>
           </div>
+
         </div>
       );
     }

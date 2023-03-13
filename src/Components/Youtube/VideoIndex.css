@@ -1,7 +1,7 @@
 .videoplayer {
-  margin-top: -20px;
-   width: 640px;
-   height: 350px;
+  margin-top: -40px;
+   width: 800px;
+   height: 450px;
    margin-left: 80px;
 
 }
@@ -24,7 +24,7 @@ body {
   .form2 {
     display: flex;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 20px;
   }
   
   .input2[type="text"] {
@@ -53,4 +53,10 @@ body {
 
   .comments {
     margin-left: 60px;
+  }
+
+  .videoscroll {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
   }

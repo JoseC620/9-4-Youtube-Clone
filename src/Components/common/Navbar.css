@@ -1,5 +1,5 @@
-header {
-    position: fixed;
+.navbar {
+   position: relative;
     width: 100%;
     align-items: center;
     display: flex;
@@ -7,13 +7,13 @@ header {
     background-color: red;
   }
  
-  header h1 {
+  .navbarh1 {
     height: auto;
     margin: 0;
     font-size: 36px;
   }
   
-  header h1 span {
+  .navbarspan {
     font-weight: 300;
   }
   
@@ -22,7 +22,7 @@ header {
     text-decoration: none;
   }
 
-  header ul a {
+  .navbarul a {
     display: inline-block;
     font-size: 20px;
     padding: 5 20px;
