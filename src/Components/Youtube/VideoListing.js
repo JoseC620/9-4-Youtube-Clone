@@ -36,7 +36,7 @@ export default function VideoListing({ search }) {
           {videos.map((video) => {
             return (
               <div key={video.id.videoId}>
-
+                  <br></br><br></br><br></br>
                 <Link to={`/Videos/play/${video.id.videoId}`}>
 
                 <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail"></img>
