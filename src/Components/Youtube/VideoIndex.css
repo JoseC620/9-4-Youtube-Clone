@@ -1,19 +1,18 @@
-.videoplayer {
+/* .videoplayer {
   margin-top: -40px;
    width: 1200px;
    height: 450px;
    margin-left: 80px;
+} */
 
-}
-
-body {
+/* body {
     overflow-y: scroll;
 }
 
 .opinion {
     display: flex;
     column-gap: 15px;
-}
+} */
 
 .search-container2 {
     display: flex;
@@ -60,7 +59,7 @@ body {
     column-gap: 20px;
   }
 
-  .thumbnail {
+  .thumbnail2 {
     width: 90%;
     height: 300px;
     margin-right: 10px;
