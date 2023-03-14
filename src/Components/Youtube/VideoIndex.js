@@ -94,7 +94,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
                   <br></br><br></br><br></br>
                 <Link to={`/Videos/play/${video.id.videoId}`}>
 
-                <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail"></img>
+                <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail2"></img>
                 <h3 className="text">{video.snippet.title}</h3>
                 </Link>
               </div>
