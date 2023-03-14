@@ -11,19 +11,19 @@ const [searchTerm, setSearchTerm] = useState("");
 const [videos, setVideos] = useState([])
 const [loadingError, setLoadingError] = useState(false)
 
-useEffect(() => {
-  getAllVideos(searchTerm).then((response) => {
-    console.log(response.items)
-    setVideos(response.items)
-    if (Object.keys(response).length === 0) {
-      setLoadingError(true)
-    } else {
-      setLoadingError(false)
-    }
-  }).catch((error) => {
-    setLoadingError(true)
-  })
-}, [searchTerm])
+// useEffect(() => {
+//   getAllVideos(searchTerm).then((response) => {
+//     console.log(response.items)
+//     setVideos(response.items)
+//     if (Object.keys(response).length === 0) {
+//       setLoadingError(true)
+//     } else {
+//       setLoadingError(false)
+//     }
+//   }).catch((error) => {
+//     setLoadingError(true)
+//   })
+// }, [searchTerm])
 
 
 const handleSearchInputChange = (event) => {
@@ -95,7 +95,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
                 <Link to={`/Videos/play/${video.id.videoId}`}>
 
                 <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail2"></img>
-                <h3 className="text">{video.snippet.title}</h3>
+                <h3 className="text2">{video.snippet.title}</h3>
                 </Link>
               </div>
             )
