@@ -1,23 +1,21 @@
-/* .videoplayer {
-  margin-top: -40px;
-   width: 1200px;
-   height: 450px;
-   margin-left: 80px;
-} */
+.videoplayer {
+  margin-top: -200px;
+  width: 700px;
+  height: 450px;
+  justify-content: center;
+  margin-left: 350px;
+} 
 
-/* body {
-    overflow-y: scroll;
-}
 
 .opinion {
     display: flex;
     column-gap: 15px;
-} */
+} 
 
 .search-container2 {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 200px;
   }
   
   .form2 {
@@ -26,13 +24,11 @@
     margin-top: 20px;
   }
   
-  .input2[type="text"] {
+  .input2 {
     width: 300px;
     height: 30px;
     padding: 5px;
     border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 5px 0 0 5px;
   }
   
   .button2[type="submit"] {
@@ -50,22 +46,5 @@
   }
   
   .comments {
-    margin-left: 60px;
-  }
-
-  .videoscroll {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-  }
-
-  .thumbnail2 {
-    width: 90%;
-    height: 300px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
-  .text2 {
-    margin-top: 10px;
+    margin-left: 330px;
   }
