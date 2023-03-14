@@ -1,6 +1,6 @@
 .about {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1200px;
     padding: 20px;
   }
   
@@ -12,12 +12,12 @@
   .about p {
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
   
   .about-container {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1200px;
     padding: 20px;
   }
   
@@ -34,13 +34,25 @@
   }
   
   .member-card {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+
+  /* .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .member-card {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
     padding: 20px;
     width: calc(33.33% - 40px);
-  }
+  } */
   
   .member-card h2 {
     font-size: 24px;
@@ -115,4 +127,8 @@
     background-color: #0062cc;
   }
   
-
+  .app-screenshots {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
