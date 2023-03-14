@@ -1,6 +1,6 @@
 .videoplayer {
   margin-top: -40px;
-   width: 800px;
+   width: 1200px;
    height: 450px;
    margin-left: 80px;
 
@@ -37,7 +37,7 @@ body {
   }
   
   .button2[type="submit"] {
-    height: 30px;
+    height: 42px;
     padding: 5px 10px;
     background-color: #4CAF50;
     color: white;
@@ -50,13 +50,23 @@ body {
     background-color: #45a049;
   }
   
-
   .comments {
     margin-left: 60px;
   }
 
   .videoscroll {
-    display: flex;
-    flex-direction: column;
-    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  .thumbnail {
+    width: 90%;
+    height: 300px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    margin-top: 10px;
   }

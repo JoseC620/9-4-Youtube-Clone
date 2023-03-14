@@ -90,7 +90,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
       <section className="videoscroll">
       {videos.map((video) => {
             return (
-              <div key={video.id.videoId}>
+              <div key={video.id.videoId} >
                   <br></br><br></br><br></br>
                 <Link to={`/Videos/play/${video.id.videoId}`}>
 

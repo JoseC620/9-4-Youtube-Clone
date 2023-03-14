@@ -1,10 +1,6 @@
 
-
 import React from "react";
-import { Link } from "react-router-dom";
 import "./About.css";
-
-
 
 export default function About() {
 
@@ -72,10 +68,9 @@ export default function About() {
 
           <h1>App Screenshots</h1>
           <div className="app-screenshots">
-          {/* <img src={process.env.PUBLIC_URL + '/searchscreen.png'} alt="Screenshota" style={{ width: '30%'}} /> */}
-            <img src="./homescreen.png" alt="Screenshota" style={{ width: '30%'}} />
-            <img src="./searchscreen.png" alt="Screenshotb" style={{ width: '30%'}} />
-            <img src="./videoscreen.png" alt="Screenshotc" style={{ width: '30%'}} />
+            <img src="./homescreen.png" alt="Screenshota"  />
+            <img src="./searchscreen.png" alt="Screenshotb"  />
+            <img src="./videoscreen.png" alt="Screenshotc"  />
           </div>
     
           <div className="team"><br></br><br></br>
