@@ -22,9 +22,6 @@ const handleSearchFormSubmit = (e) => {
   console.log(searchTerm);
 };
 
-    if (search === undefined){
-      search = "surfing"
-    }
 
     useEffect(() => {
         getAllVideos(search).then((response) => {
@@ -55,7 +52,7 @@ const handleSearchFormSubmit = (e) => {
           value={searchTerm}
           onChange={handleSearchInputChange}
         />
-        <Link to={`/Videos/Search/${!searchTerm ? "surfing": searchTerm}`}>
+        <Link to={`/Videos/Search/${searchTerm}`}>
           <button className="button2" type="submit">Go</button>
         </Link>
       </form>

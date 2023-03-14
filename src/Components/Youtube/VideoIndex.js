@@ -83,7 +83,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
           value={searchTerm}
           onChange={handleSearchInputChange}
         />
-        <Link to={`/Videos/Search/${!searchTerm ? "surfing": searchTerm}`}>
+        <Link to={`/Videos/Search/${searchTerm}`}>
           <button className="button2" type="submit">Go</button>
         </Link>
       </form>
