@@ -17,8 +17,8 @@ function App() {
         <Navbar />
           <Routes>
             <Route path="/" element={<Home  callback={setSearch} />} />
-           <Route path="/About" element={<About />} />
-           <Route path='/Videos/play/:id' element={<VideoIndex />} />
+            <Route path="/About" element={<About />} />
+            <Route path='/Videos/play/:id' element={<VideoIndex callback={setSearch} />} />
             <Route path='/Videos/search/:searchTerm' element={<VideoListing search={search}/>}/>
           </Routes>
     </Router>

@@ -1,8 +1,7 @@
 .videos {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -70px;
-  border: 0px;
+  margin-top: -210px;
   justify-content: center; 
 }
 
@@ -16,3 +15,4 @@
 .thumbnail {
   padding: 25px;
 }
+

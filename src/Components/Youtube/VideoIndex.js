@@ -5,11 +5,24 @@ import { Link } from "react-router-dom";
 import { getAllVideos } from "../../api/fetch";
 
 
-export default function VideoIndex() {
+export default function VideoIndex( { callback }) {
 
 const [searchTerm, setSearchTerm] = useState("");
 const [videos, setVideos] = useState([])
 const [loadingError, setLoadingError] = useState(false)
+const [notes, setNotes] = useState([]);
+
+let arrayOfComments = []
+
+const handleComments = (event) => {
+  event.preventDefault();
+  const commenterName = event.target.elements["commenter"].value;
+  const commentText = event.target.elements["comment"].value;
+  const newCommentNote = { commenter: commenterName, comment: commentText };
+  // student.notes.push(newCommentNote);
+  setNotes([]);
+  event.target.reset();
+};
 
 // useEffect(() => {
 //   getAllVideos(searchTerm).then((response) => {
@@ -38,7 +51,6 @@ const handleSearchFormSubmit = (e) => {
 
 
 let id = window.location.pathname.substring(13)
-let arrayOfComments = []
 
 const names = ["John Doe", "Jane Smith", "Bob Johnson", "Mary Brown"]; 
 
@@ -59,7 +71,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
     count2 = 1
   }
   
-  const numComments = 10; 
+  const numComments = 3; 
   for (let i = 0; i < numComments; i++) { 
     const comment = generateRandomComment();
     arrayOfComments.push(comment)
@@ -73,7 +85,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
 
 
     return (
-<>
+      <>
       <div className="search-container2">
       <form onSubmit={handleSearchFormSubmit} className="form2">
         <input
@@ -84,7 +96,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
           onChange={handleSearchInputChange}
         />
         <Link to={`/Videos/Search/${searchTerm}`}>
-          <button className="button2" type="submit">Go</button>
+          <button className="button2" type="submit" onClick={() => callback(searchTerm)}>Go</button>
         </Link>
       </form>
       <section className="videoscroll">
@@ -109,6 +121,18 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
             <section className="stuff">
             <iframe src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
             </iframe>
+            <div className="comment-section">
+            <h4>1-on-1 Notes</h4>
+            <form className="comment" onSubmit={handleComments}>
+            <label htmlFor="Commenter Name">Commenter Name</label>
+            <input type="text" name="commenter" onChange={handleComments}/>
+            <br></br>
+            <label htmlFor="Comment">Comment</label>
+            <input type="text" name="comment" onChange={handleComments}/>
+            <br></br>
+            <button type="submit">Add Note</button>
+            </form> 
+            </div>
                 <ul className="comments">
                 {arrayOfComments.map((comment, index) => {
                     return (

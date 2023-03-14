@@ -13,18 +13,18 @@ export default function VideoListing({ search }) {
     const navigate = useNavigate()
 
 
-const handleSearchInputChange = (event) => {
-  setSearchTerm(event.target.value);
-};
-
-const handleSearchFormSubmit = (e) => {
-  e.preventDefault();
-  console.log(searchTerm);
-};
+    const handleSearchInputChange = (event) => {
+      setSearchTerm(event.target.value);
+    };
+    
+    const handleSearchFormSubmit = (e) => {
+      e.preventDefault();
+      console.log(searchTerm);
+    };
 
 
     useEffect(() => {
-        getAllVideos(search).then((response) => {
+        getAllVideos(!searchTerm ? search: searchTerm).then((response) => {
           console.log(response.items)
           setVideos(response.items)
           if (Object.keys(response).length === 0) {
@@ -35,15 +35,14 @@ const handleSearchFormSubmit = (e) => {
         }).catch((error) => {
           setLoadingError(true)
         })
-      }, [search])
+      }, [!searchTerm ? search: searchTerm])
 
-    console.log(search)
 
     return (
 
 
       <>
-      <div className="search-container2">
+       <div className="search-container2">
       <form onSubmit={handleSearchFormSubmit} className="form2">
         <input
           className="input2"
