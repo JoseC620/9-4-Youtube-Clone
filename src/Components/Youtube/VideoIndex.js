@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { getAllVideos } from "../../api/fetch";
 
 
-export default function VideoIndex( { callback }) {
+export default function VideoIndex( { callback, darkMode } ) {
 
 const [searchTerm, setSearchTerm] = useState("");
 const [videos, setVideos] = useState([])

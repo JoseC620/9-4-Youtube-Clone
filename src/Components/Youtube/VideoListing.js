@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import "./VideoListing.css"
 
 
-export default function VideoListing({ search }) {
+export default function VideoListing({ search, darkMode } ) {
 
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])

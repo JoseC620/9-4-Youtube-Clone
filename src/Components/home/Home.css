@@ -1,9 +1,23 @@
-/* body {
+body {
     overflow: hidden;
-} */
+}
+
+.light-mode {
+  background-image: url(./lightBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+}
+
+.dark-mode {
+  background-image: url(./darkBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f8f8f8;
+}
 
 .home-container {
-  background-image: url(./lightBackground.png);
+  /* background-image: url(./lightBackground.png); */
     background-size: cover;
     display: flex;
     justify-content: center;
