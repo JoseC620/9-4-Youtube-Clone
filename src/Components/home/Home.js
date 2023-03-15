@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom";
 import './Home.css'
 
-export default function Home({ callback }) {
+export default function Home({ callback }, darkMode) {
 
     const [searchVisible, setSearchVisible] = useState(false);
     const [loadingError, setLoadingError] = useState(false)
