@@ -3,7 +3,7 @@
 } */
 
 .home-container {
-  background-image: url(./lightBackground.png);
+  
     background-size: cover;
     display: flex;
     justify-content: center;

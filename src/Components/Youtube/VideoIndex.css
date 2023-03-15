@@ -34,17 +34,16 @@
   .button2[type="submit"] {
     height: 42px;
     padding: 5px 10px;
-    background-color: #4CAF50;
     color: white;
     border: 1px solid #4CAF50;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
   }
   
-  .button2[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
   .comments {
     margin-left: 330px;
+  }
+
+  .comment-section {
+    text-align: center;
   }

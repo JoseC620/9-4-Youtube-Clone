@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import "./VideoListing.css"
 
 
-export default function VideoListing({ search }) {
+export default function VideoListing({ search, mode }) {
 
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])
@@ -41,7 +41,7 @@ export default function VideoListing({ search }) {
     return (
 
 
-      <>
+      <div style={{backgroundColor:!mode ? "white":"rgb(50,50,50)"}}>
        <div className="search-container2">
       <form onSubmit={handleSearchFormSubmit} className="form2">
         <input
@@ -49,10 +49,10 @@ export default function VideoListing({ search }) {
           type="text"
           placeholder="Search..."
           value={searchTerm}
-          onChange={handleSearchInputChange}
+          onSubmit={handleSearchInputChange}
         />
         <Link to={`/Videos/Search/${searchTerm}`}>
-          <button className="button2" type="submit">Go</button>
+          <button className="button2" type="submit" style={{backgroundColor: !mode ? "green": "orange"}}>Go</button>
         </Link>
       </form>
     </div>
@@ -66,12 +66,12 @@ export default function VideoListing({ search }) {
                 <Link to={`/Videos/play/${video.id.videoId}`}>
 
                 <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail"></img>
-                <h3 className="text">{video.snippet.title}</h3>
+                <h3 className="text" style={{color:!mode ? "black" : "white"}}>{video.snippet.title}</h3>
                 </Link>
               </div>
             )
           })}
             </div>
-            </>
+            </div>
     )
 }
