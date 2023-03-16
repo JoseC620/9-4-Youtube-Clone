@@ -29,7 +29,7 @@ function App() {
         <ErrorModal loadingError={loadingError}/>
 
           <Routes>
-            <Route path="/" element={<Home  callback={setSearch} mode={mode} loadingError={loadingError}/>} />
+            <Route path="/" element={<Home callback={setSearch} mode={mode} loadingError={loadingError}/>} />
             <Route path="/About" element={<About mode={mode}/>} />
             <Route path='/Videos/play/:id' element={<VideoIndex callback={setSearch} mode={mode} />} />
             <Route path='/Videos/search/:searchTerm' element={<VideoListing search={search} mode={mode}/>}/>
