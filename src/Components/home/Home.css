@@ -1,11 +1,11 @@
 
+
 .home-container {
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-
+    min-height: 92vh;
   }
   
   .search-container {
@@ -86,4 +86,5 @@
     cursor: pointer;
     font-size: 24px; 
   }
+
   
