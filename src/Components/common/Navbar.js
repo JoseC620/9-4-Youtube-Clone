@@ -40,7 +40,6 @@ export default function Navbar( { callback } ) {
             </section>
             
 
-        </ul>
       </header>
     )
 }
