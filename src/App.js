@@ -4,7 +4,7 @@ import VideoListing from './Components/Youtube/VideoListing';
 import Home from './Components/home/Home';
 import About from './Components/about/About';
 import VideoIndex from './Components/Youtube/VideoIndex';
-import ErrorModal from './Components/error/ErrorModal';
+import ErrorModal from './Components/error/ModalError';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useState } from 'react';
 

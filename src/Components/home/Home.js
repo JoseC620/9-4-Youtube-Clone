@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import ErrorModal from "../error/ErrorModal";
+import ErrorModal from "../error/ModalError";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './Home.css'
