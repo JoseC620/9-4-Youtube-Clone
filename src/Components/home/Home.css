@@ -1,9 +1,9 @@
-/* body {
+body {
     overflow: hidden;
-} */
+}
+
 
 .home-container {
-  
     background-size: cover;
     display: flex;
     justify-content: center;

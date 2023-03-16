@@ -13,10 +13,17 @@ function App() {
   const [search, setSearch] = useState("")
   const [mode, setMode] = useState(false)
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleModeChange = () => {
+    setDarkMode(!darkMode);
+  }
+
   return (
-    <div className="App">
+    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
     <Router>
         <Navbar callback={setMode}/>
+
           <Routes>
             <Route path="/" element={<Home  callback={setSearch} mode={mode} />} />
             <Route path="/About" element={<About mode={mode}/>} />

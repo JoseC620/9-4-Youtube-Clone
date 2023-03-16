@@ -24,10 +24,12 @@ export default function Navbar( { callback } ) {
           </h1>
          
         </article>
-        <ul className="navbarul"> 
+        <ul className="navbarul">
+          
             <Link to="/about">
               <span> About</span>
             </Link>
+
             </ul>
             <section className="darkButton">       
             <label class="switch">
@@ -38,6 +40,7 @@ export default function Navbar( { callback } ) {
             </section>
             
 
+        </ul>
       </header>
     )
 }

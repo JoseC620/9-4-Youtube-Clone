@@ -3,7 +3,9 @@ import { useState } from "react"
 import { Link } from "react-router-dom";
 import './Home.css'
 
+
 export default function Home({ callback, mode }) {
+
 
     const [searchVisible, setSearchVisible] = useState(false);
     const [loadingError, setLoadingError] = useState(false)
