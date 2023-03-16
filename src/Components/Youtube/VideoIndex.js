@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { getAllVideos } from "../../api/fetch";
 
 
-export default function VideoIndex( { callback, darkMode } ) {
+
+export default function VideoIndex( { callback, mode }) {
+
 
 const [searchTerm, setSearchTerm] = useState("");
 const [videos, setVideos] = useState([])
@@ -85,7 +87,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
 
 
     return (
-      <>
+      <div style={{backgroundColor:!mode ? "white":"rgb(50,50,50)"}}>
       <div className="search-container2">
       <form onSubmit={handleSearchFormSubmit} className="form2">
         <input
@@ -96,7 +98,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
           onChange={handleSearchInputChange}
         />
         <Link to={`/Videos/Search/${searchTerm}`}>
-          <button className="button2" type="submit" onClick={() => callback(searchTerm)}>Go</button>
+          <button className="button2" type="submit" onClick={() => callback(searchTerm)} style={{backgroundColor: !mode ? "green": "orange"}}>Go</button>
         </Link>
       </form>
       <section className="videoscroll">
@@ -122,12 +124,12 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
             <iframe src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
             </iframe>
             <div className="comment-section">
-            <h4>1-on-1 Notes</h4>
+            <h4>Leave a comment!</h4>
             <form className="comment" onSubmit={handleComments}>
-            <label htmlFor="Commenter Name">Commenter Name</label>
+            <label htmlFor="Commenter Name">Your Name:</label>
             <input type="text" name="commenter" onChange={handleComments}/>
             <br></br>
-            <label htmlFor="Comment">Comment</label>
+            <label htmlFor="Comment">Comment:</label>
             <input type="text" name="comment" onChange={handleComments}/>
             <br></br>
             <button type="submit">Add Note</button>
@@ -150,6 +152,6 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
                 </ul>
             </section>
         </div>
-        </>
+        </div>
     )
 }

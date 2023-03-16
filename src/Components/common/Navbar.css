@@ -4,7 +4,6 @@
     align-items: center;
     display: flex;
     padding: 5px 5% 0px;
-    background-color: red;
     overflow: hidden;
   }
  
@@ -50,58 +49,77 @@
     border-left: 24px solid white;
   }
 
-  .checkbox-container {
-    display: inline-block;
+  .darkButton {
+   display: inline-block;
+   position: absolute;
+   right: 300px;
+  }
+
+
+  .switch {
     position: relative;
-    padding-left: 35px;
-    margin-left: auto;
-    cursor: pointer;
-    font-size: 22px;
-    user-select: none;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
   }
   
-  .checkbox-container input {
-    position: absolute;
+  /* Hide default HTML checkbox */
+  .switch input {
     opacity: 0;
-    cursor: pointer;
-    height: 0;
     width: 0;
+    height: 0;
   }
   
-  .checkmark {
+  /* The slider */
+  .slider {
     position: absolute;
+    cursor: pointer;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 4px;
-  }
-  
-  .checkbox-container:hover input ~ .checkmark {
+    right: 0;
+    bottom: 0;
     background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
   }
   
-  .checkbox-container input:checked ~ .checkmark {
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
     background-color: #2196F3;
   }
   
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
   }
   
-  .checkbox-container input:checked ~ .checkmark:after {
-    display: block;
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
   }
   
-  .checkbox-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
+
+  .slider.round {
+    border-radius: 34px;
   }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .darkText {
+    margin-left: -10px;
+  }
+  
+

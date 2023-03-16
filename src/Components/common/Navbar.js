@@ -1,24 +1,17 @@
 import { Link } from "react-router-dom"
-import React, { useState } from "react"
+import { useState } from "react"
 import "./Navbar.css"
 
-export default function Navbar(props) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+export default function Navbar( { callback } ) {
 
-  const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
-    props.onModeChange();
-  };
-  
+  const [mode, setMode] = useState()
 
-  // const background = `url(/${isDarkMode ? 'dark' : 'light'}-background.png)`;
-
-
-
-
+  callback(mode)
+   
   return (
 
-        <header className="navbar">
+        <header className="navbar" style={{backgroundColor:!mode?"red":"rgb(80,80,80)"}}>
+
             <div className="youtube-logo" style={{ marginRight: "10px" }}>
               <div className="playBtn"></div>
             </div>
@@ -36,18 +29,16 @@ export default function Navbar(props) {
             <Link to="/about">
               <span> About</span>
             </Link>
-          
-            <label htmlFor="mode-switch" className="checkbox-container" style={{ marginLeft: "auto" }}>
-        <input
-          type="checkbox"
-          id="mode-switch"
-          onChange={toggleMode}
-          checked={isDarkMode}
-          />
-        <span className="checkmark"></span>
-        <span className="mode-switch-label">Dark Mode</span>
-        </label>
 
+            </ul>
+            <section className="darkButton">       
+            <label class="switch">
+            <input type="checkbox" onClick={() => {setMode(!mode)}}/>
+            <span class="slider round"></span>
+            </label>
+            <aside className="darkText">Dark Mode</aside>  
+            </section>
+            
 
         </ul>
       </header>
