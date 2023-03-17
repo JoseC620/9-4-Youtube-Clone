@@ -1,30 +1,42 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import './ModalError.css'
 
-function ModalError( {loadingError} ) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+function ModalError() {
+  const [open, setOpenModal] = useState(false)
 
   return (
-    <>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+    <div className="modalBackground">
+    <div className="modalContainer">
+      <div className="titleCloseBtn">
+        <button
+          onClick={() => {
+            setOpenModal(false);
+          }}
+        >
+          X
+        </button>
+      </div>
+      <div className="title">
+        <h1>Are You Sure You Want to Continue?</h1>
+      </div>
+      <div className="body">
+        <p>The next page looks amazing. Hope you want to go there!</p>
+      </div>
+      <div className="footer">
+        <button
+          onClick={() => {
+            setOpenModal(false);
+          }}
+          id="cancelBtn"
+        >
+          Cancel
+        </button>
+        <button>Continue</button>
+      </div>
+    </div>
+  </div>
   );
-}
+    }
 export default ModalError

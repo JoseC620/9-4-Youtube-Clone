@@ -1,21 +1,13 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import ModalError from "../error/ModalError";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import './Home.css'
 
-export default function Home({ callback, mode, loadingError }) {
+export default function Home({ callback, mode, show }) {
 
     const [searchVisible, setSearchVisible] = useState(false);
     const [searchTerm, setSearchTerm] = useState("")
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
   
-
-
     let image
 
     if(!mode){
@@ -39,7 +31,7 @@ export default function Home({ callback, mode, loadingError }) {
         setSearchVisible(false);
       };
 
-      console.log(mode)
+      
 
 
       return (
