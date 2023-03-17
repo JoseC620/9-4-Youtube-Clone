@@ -30,7 +30,10 @@ export default function About( { mode }) {
     return (
 
         <div className="about-container">
-          <div style={{ filter: mode ? "brightness(40%)" : "none" }}>
+          <div style={{ 
+            backgroundImage: "url('/aboutbackground.jpg')",
+            filter: mode ? "brightness(40%)" : "none",
+            }}>
 
           <div className="about">
             <h1>About Our Project</h1>

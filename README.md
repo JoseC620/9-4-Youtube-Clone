@@ -12,9 +12,9 @@ Our app is built using JSX to create components, and we have committed to using 
 
 ### App Screenshots
 
-![Screenshot a](/homescreen.png)
-![Screenshot b](/searchscreem.png)
-![Screenshot c](/videoscreen.png)
+![Screenshot a](./public/homescreen.png)
+![Screenshot b](./public/searchscreen.png)
+![Screenshot c](./public/videoscreen.png)
 
 ### Meet the Team
 
