@@ -4,7 +4,7 @@ import VideoListing from './Components/Youtube/VideoListing';
 import Home from './Components/home/Home';
 import About from './Components/about/About';
 import VideoIndex from './Components/Youtube/VideoIndex';
-import ErrorModal from './Components/error/ModalError';
+import ModalError from './Components/error/ModalError';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useState } from 'react';
 
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
     <Router>
         <Navbar callback={setMode}/>
-        <ErrorModal loadingError={loadingError}/>
+     
 
           <Routes>
             <Route path="/" element={<Home callback={setSearch} mode={mode} loadingError={loadingError}/>} />

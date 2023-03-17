@@ -1,6 +1,6 @@
 import { getAllVideos } from "../../api/fetch"
 import { useEffect, useState  } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./VideoListing.css"
 
 
@@ -11,8 +11,6 @@ export default function VideoListing({ search, mode }) {
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])
     const [searchTerm, setSearchTerm] = useState("");
-
-    const navigate = useNavigate()
 
 
     const handleSearchInputChange = (event) => {
@@ -51,7 +49,7 @@ export default function VideoListing({ search, mode }) {
           type="text"
           placeholder="Search..."
           value={searchTerm}
-          onSubmit={handleSearchInputChange}
+          onChange={handleSearchInputChange}
         />
         <Link to={`/Videos/Search/${searchTerm}`}>
           <button className="button2" type="submit" style={{backgroundColor: !mode ? "green": "orange"}}>Go</button>
