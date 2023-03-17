@@ -23,13 +23,16 @@ Our app is built using JSX to create components, and we have committed to using 
 ![Screenshot b](./public/searchscreen.png)
 ![Screenshot c](./public/videoscreen.png) -->
 
+
+
 ## 😁 Meet the Team 😁
 
 ### Jose Cepeda
 
 I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google-funded software engineering fellowship with a 9% acceptance rate whose graduates have been hired as developers at leading companies such as Pinterest, JP Morgan, Citi, Spotify, and Blackstone. I'm currently learning React, having already studied JavaScript, HTML & CSS and I am training to become a software engineer so that I can solve real-world problems.
 
-[GitHub](https://github.com/jose-cepeda){:target="_blank"}
+[GitHub](https://github.com/jose-cepeda){:target="_blank rel="noopener"}
+[GitHub] <a href="http://github.com/jose-cepeda" target="_blank">Go</a>
 
 ### Mark Roberston
 

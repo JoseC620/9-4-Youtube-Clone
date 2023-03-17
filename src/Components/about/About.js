@@ -36,6 +36,7 @@ export default function About( { mode }) {
             }}>
 
           <div className="about">
+            <br></br>
             <h1>About Our Project</h1>
             <p>
               Our project is a video search and viewing app, YouTube clone, that allows users to
@@ -70,7 +71,6 @@ export default function About( { mode }) {
               interface.
             </p>
           </div>
-
           <h1>App Screenshots</h1>
           <div className="app-screenshots">
             <img src="./homescreen.png" alt="Screenshota"  />
