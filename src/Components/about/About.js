@@ -2,7 +2,7 @@
 import React from "react";
 import "./About.css";
 
-export default function About() {
+export default function About( { mode }) {
 
     const teamMembers = [
         {
@@ -30,6 +30,8 @@ export default function About() {
     return (
 
         <div className="about-container">
+          <div style={{ filter: mode ? "brightness(40%)" : "none" }}>
+
           <div className="about">
             <h1>About Our Project</h1>
             <p>
@@ -92,6 +94,7 @@ export default function About() {
             </div>
           </div>
 
+        </div>
         </div>
       );
     }
