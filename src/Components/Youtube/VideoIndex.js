@@ -22,7 +22,8 @@ const handleComments = (event) => {
   const commentText = event.target.elements["comment"].value;
   const newCommentNote = { commenter: commenterName, comment: commentText };
   // student.notes.push(newCommentNote);
-  setNotes([]);
+  // setNotes([]);
+  setNotes((notes) => [...notes, newCommentNote]);
   event.target.reset();
 };
 
@@ -135,21 +136,31 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
             <button type="submit">Add Note</button>
             </form> 
             </div>
-                <ul className="comments">
-                {arrayOfComments.map((comment, index) => {
-                    return (
-                        <div key={index}>
-                            {comment}
-                            <aside className="opinion">
-                            {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
-                            <button onClick={like()}>👍</button>
-                            {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
-                            <button onClick={dislike()}>👎</button>
-                            </aside>
-                        </div>
-                    )
-                })}
-                </ul>
+            <ul className="comments">
+  {notes.map((note, index) => (
+    <div key={index}>
+      <li>{note.commenter} commented: {note.comment}.</li>
+      <aside className="opinion">
+        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+        <button onClick={() => like()}>👍</button>
+        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+        <button onClick={() => dislike()}>👎</button>
+      </aside>
+    </div>
+  ))}
+  {arrayOfComments.map((comment, index) => (
+    <div key={index}>
+      <li>{comment}</li>
+      <aside className="opinion">
+        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+        <button onClick={() => like()}>👍</button>
+        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+        <button onClick={() => dislike()}>👎</button>
+      </aside>
+    </div>
+  ))}
+</ul>
+
             </section>
         </div>
         </div>
