@@ -1,17 +1,13 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import ErrorModal from "../error/ModalError";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import './Home.css'
 
-export default function Home({ callback, mode, loadingError }) {
+export default function Home({ callback, mode, show }) {
 
     const [searchVisible, setSearchVisible] = useState(false);
     const [searchTerm, setSearchTerm] = useState("")
-
-
+  
     let image
 
     if(!mode){
@@ -35,36 +31,11 @@ export default function Home({ callback, mode, loadingError }) {
         setSearchVisible(false);
       };
 
-      function modal() {
-        if (loadingError){
-        return (
-          <div
-            className="modal show"
-            style={{ display: 'block', position: 'initial' }}
-          >
-            <Modal.Dialog>
-              <Modal.Header closeButton>
-                <Modal.Title>Modal title</Modal.Title>
-              </Modal.Header>
       
-              <Modal.Body>
-                <p>Modal body text goes here.</p>
-              </Modal.Body>
-      
-              <Modal.Footer>
-                <Button variant="secondary">Close</Button>
-                <Button variant="primary">Save changes</Button>
-              </Modal.Footer>
-            </Modal.Dialog>
-          </div>
-        )
-      }
-    }
-
-      console.log(mode)
 
 
       return (
+
         
         <div className="home-container" style={{backgroundImage: `url(${image})`}}>
           <div className="search-container">
