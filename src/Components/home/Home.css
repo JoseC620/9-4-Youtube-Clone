@@ -5,13 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 92vh;
+    min-height: 100vh;
   }
   
-  .search-container {
+  /* .search-container {
     position: relative;
     margin-top: -100px; 
-  }
+  } */
   
   .search-icon {
     position: absolute;
@@ -89,7 +89,8 @@
 
   .home-container {
     /* background-image: url("./lightBackground.png"); */
-    background-position: 0 61px;
+    background-position: 50 -61px;
+  
   }
   
   

@@ -42,7 +42,6 @@ Our app is built using JSX to create components, and we have committed to using 
 ![Screenshot c](./public/videoscreen.png) -->
 <pre>
 
-
 </pre>
 
 <br></br>
