@@ -17,7 +17,8 @@ Our app is built using JSX to create components, and we have committed to using 
 <!-- <img src="./public/homescreen.png" alt="Screenshot a" width="68%" title="The Home Screen"> -->
 ### The Home Screen
 
-![image](./public/homescreen.png "The Home Screen") 
+| ![image](./public/homescreen.png "The Home Screen") |
+|-|
 
 <!-- <img src="./public/searchscreen.png" alt="Screenshot b" width="68%" title="The Expanding  Search Bar"> -->
 ### The Expanding  Search Bar
@@ -37,7 +38,10 @@ Our app is built using JSX to create components, and we have committed to using 
 <!-- ![Screenshot a](./public/homescreen.png)
 ![Screenshot b](./public/searchscreen.png)
 ![Screenshot c](./public/videoscreen.png) -->
+<pre>
 
+
+</pre>
 
 
 ## 😁 Meet the Team 😁
