@@ -22,19 +22,19 @@ Our app is built using JSX to create components, and we have committed to using 
 |-|
 
 <!-- <img src="./public/searchscreen.png" alt="Screenshot b" width="68%" title="The Expanding  Search Bar"> -->
-<br><br>
+
 ### The Expanding  Search Bar
 
 | ![image](./public/searchscreen.png "The Expanding  Search Bar") |
 |-|
-<br><br>
+
 <!-- <img src="./public/videoscreen.png" alt="Screenshot c" width="68%" title="Search Results Page"> -->
-<br><br>
+
 ### Search Results Page
 
 | ![image](./public/videoscreen.png "Search Results Page") |
 |-|
-<br><br>
+
 ### Video Play Page
 
 | ![image](./public/videoplayscreen.png "Play Screen Page") |
