@@ -17,23 +17,25 @@ Our app is built using JSX to create components, and we have committed to using 
 <!-- <img src="./public/homescreen.png" alt="Screenshot a" width="68%" title="The Home Screen"> -->
 ### The Home Screen
 
-|| ![image](./public/homescreen.png "The Home Screen") ||
-||-||
+| ![image](./public/homescreen.png "The Home Screen") |
+|-|
 
 <!-- <img src="./public/searchscreen.png" alt="Screenshot b" width="68%" title="The Expanding  Search Bar"> -->
 ### The Expanding  Search Bar
 
-![image](./public/searchscreen.png "The Expanding  Search Bar") 
+| ![image](./public/searchscreen.png "The Expanding  Search Bar") |
+|-|
 
 <!-- <img src="./public/videoscreen.png" alt="Screenshot c" width="68%" title="Search Results Page"> -->
 ### Search Results Page
 
-![image](./public/videoscreen.png "Search Results Page") 
+| ![image](./public/videoscreen.png "Search Results Page") |
+|-|
 
 ### Video Play Page
 
-![image](./public/videoplayscreen.png "Play Screen Page") 
-
+| ![image](./public/videoplayscreen.png "Play Screen Page") |
+|-|
 
 <!-- ![Screenshot a](./public/homescreen.png)
 ![Screenshot b](./public/searchscreen.png)
@@ -43,7 +45,7 @@ Our app is built using JSX to create components, and we have committed to using 
 
 </pre>
 
-
+<br></br>
 ## 😁 Meet the Team 😁
 
 ### Jose Cepeda
@@ -52,6 +54,7 @@ I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google
 
 <!-- [GitHub](https://github.com/jose-cepeda){:target="_blank rel="noopener"} -->
 <a href="http://github.com/jose-cepeda" target="_blank">GitHub</a>
+<br></br>
 
 ### Mark Roberston
 
