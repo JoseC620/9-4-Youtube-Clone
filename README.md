@@ -11,6 +11,7 @@ The app also includes an "About" page where users can learn about the project an
 In order to ensure a seamless user experience, we have also implemented a modal window that displays when a 400 error occurs. This modal allows users to try their search again and exit the message by clicking an x or outside the modal.
 
 Our app is built using JSX to create components, and we have committed to using hooks. We have used create-react-app to build the app and fetch to make API calls. React-router-dom is used to create different views, while youtube-react is used to create a Youtube component for viewing videos from the Youtube API. State is used to build a stateful React application, and CSS is used to make a responsive and attractive app with decent interface.
+<br></br>
 
 ## App Screenshots
 
@@ -21,17 +22,19 @@ Our app is built using JSX to create components, and we have committed to using 
 |-|
 
 <!-- <img src="./public/searchscreen.png" alt="Screenshot b" width="68%" title="The Expanding  Search Bar"> -->
+<br><br>
 ### The Expanding  Search Bar
 
 | ![image](./public/searchscreen.png "The Expanding  Search Bar") |
 |-|
-
+<br><br>
 <!-- <img src="./public/videoscreen.png" alt="Screenshot c" width="68%" title="Search Results Page"> -->
+<br><br>
 ### Search Results Page
 
 | ![image](./public/videoscreen.png "Search Results Page") |
 |-|
-
+<br><br>
 ### Video Play Page
 
 | ![image](./public/videoplayscreen.png "Play Screen Page") |
@@ -40,9 +43,7 @@ Our app is built using JSX to create components, and we have committed to using 
 <!-- ![Screenshot a](./public/homescreen.png)
 ![Screenshot b](./public/searchscreen.png)
 ![Screenshot c](./public/videoscreen.png) -->
-<pre>
 
-</pre>
 
 <br></br>
 ## 😁 Meet the Team 😁
