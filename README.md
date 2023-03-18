@@ -25,9 +25,13 @@ Our app is built using JSX to create components, and we have committed to using 
 ![image](./public/searchscreen.png "The Expanding  Search Bar") 
 
 <!-- <img src="./public/videoscreen.png" alt="Screenshot c" width="68%" title="Search Results Page"> -->
-### earch Results Page
+### Search Results Page
 
 ![image](./public/videoscreen.png "Search Results Page") 
+
+### Video Play Page
+
+![image](./public/videoplayscreen.png "Play Screen Page") 
 
 
 <!-- ![Screenshot a](./public/homescreen.png)
