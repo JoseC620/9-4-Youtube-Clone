@@ -15,12 +15,18 @@ Our app is built using JSX to create components, and we have committed to using 
 ## App Screenshots
 
 <!-- <img src="./public/homescreen.png" alt="Screenshot a" width="68%" title="The Home Screen"> -->
+### The Home Screen
+
 ![image](./public/homescreen.png "The Home Screen") 
 
 <!-- <img src="./public/searchscreen.png" alt="Screenshot b" width="68%" title="The Expanding  Search Bar"> -->
+### The Expanding  Search Bar
+
 ![image](./public/searchscreen.png "The Expanding  Search Bar") 
 
 <!-- <img src="./public/videoscreen.png" alt="Screenshot c" width="68%" title="Search Results Page"> -->
+### earch Results Page
+
 ![image](./public/videoscreen.png "Search Results Page") 
 
 
