@@ -13,6 +13,11 @@ const [searchTerm, setSearchTerm] = useState("");
 const [videos, setVideos] = useState([])
 const [loadingError, setLoadingError] = useState(false)
 const [notes, setNotes] = useState([]);
+const [likeCount, setLikeCount] = useState(0);
+const [dislikeCount, setDislikeCount] = useState(0);
+
+
+
 
 let arrayOfComments = []
 
@@ -24,6 +29,8 @@ const handleComments = (event) => {
   // student.notes.push(newCommentNote);
   // setNotes([]);
   setNotes((notes) => [...notes, newCommentNote]);
+  setLikeCount(0);
+  setDislikeCount(0);
   event.target.reset();
 };
 
