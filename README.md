@@ -14,9 +14,14 @@ Our app is built using JSX to create components, and we have committed to using 
 
 ## App Screenshots
 
-<img src="./public/homescreen.png" alt="Screenshot a" width="68%" title="The Home Screen">
-<img src="./public/searchscreen.png" alt="Screenshot b" width="68%" title="The Expanding  Search Bar">
-<img src="./public/videoscreen.png" alt="Screenshot c" width="68%" title="Search Results Page">
+<!-- <img src="./public/homescreen.png" alt="Screenshot a" width="68%" title="The Home Screen"> -->
+![image](./public/homescreen.png "The Home Screen") 
+
+<!-- <img src="./public/searchscreen.png" alt="Screenshot b" width="68%" title="The Expanding  Search Bar"> -->
+![image](./public/searchscreen.png "The Expanding  Search Bar") 
+
+<!-- <img src="./public/videoscreen.png" alt="Screenshot c" width="68%" title="Search Results Page"> -->
+![image](./public/videoscreen.png "Search Results Page") 
 
 
 <!-- ![Screenshot a](./public/homescreen.png)
@@ -31,17 +36,17 @@ Our app is built using JSX to create components, and we have committed to using 
 
 I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google-funded software engineering fellowship with a 9% acceptance rate whose graduates have been hired as developers at leading companies such as Pinterest, JP Morgan, Citi, Spotify, and Blackstone. I'm currently learning React, having already studied JavaScript, HTML & CSS and I am training to become a software engineer so that I can solve real-world problems.
 
-[GitHub](https://github.com/jose-cepeda){:target="_blank rel="noopener"}
-[GitHub] <a href="http://github.com/jose-cepeda" target="_blank">Go</a>
+<!-- [GitHub](https://github.com/jose-cepeda){:target="_blank rel="noopener"} -->
+<a href="http://github.com/jose-cepeda" target="_blank">GitHub</a>
 
 ### Mark Roberston
 
 I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google-funded software engineering fellowship with a 9% acceptance rate whose graduates have been hired as developers at leading companies such as Pinterest, JP Morgan, Citi, Spotify, and Blackstone. I'm currently learning React, having already studied JavaScript, HTML & CSS and I am training to become a software engineer so that I can solve real-world problems. When I'm not coding, I enjoy movies, watching Formula 1 racing, music, travel and playing with my German Shepherd. Being a Pursuit Fellow will give me the foundation to go on and learn new and exciting languages such as Python, C++, C# et al. that I would like to use both personally and professionally. My first personal project will be to design and implement a quantitative trading algorithm that I can run through an API to a trading platform. I would very much enjoy working for a start-up (as I have start-up experience) or even a large financial firm, as my experience up until Pursuit has been in the financial markets.
 
-[GitHub](https://github.com/mark-robertson){:target="_blank"}
+<!-- [GitHub](https://github.com/mark-robertson){:target="_blank"} -->
+<a href="http://github.com/mark-robertson" target="_blank">GitHub</a>
 
 
-
-[Trello Board link](https://trello.com/b/R929oK85/untitled-board){:target="_blank"}
+<!-- [Trello Board link](https://trello.com/b/R929oK85/untitled-board){:target="_blank"} -->
 
 

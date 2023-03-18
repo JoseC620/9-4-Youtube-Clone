@@ -2,7 +2,7 @@
 import React from "react";
 import "./About.css";
 
-export default function About( { mode }) {
+export default function About( { mode } ) {
 
     const teamMembers = [
         {
@@ -29,11 +29,18 @@ export default function About( { mode }) {
 
     return (
 
+      <div className="about-wrapper" style={{ 
+        backgroundImage: "url('/aboutbackground.jpg')",
+        filter: mode ? "brightness(40%)" : "none",
+      }}>
+
         <div className="about-container">
-          <div style={{ 
+          {/* <div style={{ 
             backgroundImage: "url('/aboutbackground.jpg')",
+
             filter: mode ? "brightness(50%)" : "none",
             }}>
+
 
           <div className="about">
             <br></br>
@@ -72,10 +79,15 @@ export default function About( { mode }) {
             </p>
           </div>
           <h1>App Screenshots</h1>
+          <div style={{ 
+            filter: mode ? "brightness(100%)" : "brightness(100%)",
+            }}>
           <div className="app-screenshots">
-            <img src="./homescreen.png" alt="Screenshota"  />
-            <img src="./searchscreen.png" alt="Screenshotb"  />
-            <img src="./videoscreen.png" alt="Screenshotc"  />
+          <img src="./homescreen.png" alt="Screenshota" style={{ zIndex: "999" }} />
+          <img src="./searchscreen.png" alt="Screenshotb" style={{ zIndex: "999" }} />
+          <img src="./videoscreen.png" alt="Screenshotc" style={{ zIndex: "999" }} />
+  
+          </div>
           </div>
     
           <div className="team"><br></br><br></br>
