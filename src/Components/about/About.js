@@ -31,7 +31,7 @@ export default function About( { mode } ) {
 
       <div className="about-wrapper" style={{ 
         backgroundImage: "url('/aboutbackground.jpg')",
-        filter: mode ? "brightness(40%)" : "none",
+        filter: mode ? "brightness(60%)" : "none",
       }}>
 
         <div className="about-container">
@@ -39,7 +39,7 @@ export default function About( { mode } ) {
             backgroundImage: "url('/aboutbackground.jpg')",
 
             filter: mode ? "brightness(50%)" : "none",
-            }}>
+            }}> */}
 
 
           <div className="about">
@@ -86,6 +86,7 @@ export default function About( { mode } ) {
           <img src="./homescreen.png" alt="Screenshota" style={{ zIndex: "999" }} />
           <img src="./searchscreen.png" alt="Screenshotb" style={{ zIndex: "999" }} />
           <img src="./videoscreen.png" alt="Screenshotc" style={{ zIndex: "999" }} />
+          <img src="./videoplayscreen.png" alt="Screenshotc" style={{ zIndex: "999" }} />
   
           </div>
           </div>
@@ -111,5 +112,6 @@ export default function About( { mode } ) {
 
         </div>
         </div>
+        // </div>
       );
     }
