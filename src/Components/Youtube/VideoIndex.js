@@ -1,23 +1,22 @@
 
 import { useState, useEffect } from "react";
 import "./VideoIndex.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAllVideos } from "../../api/fetch";
 
 
 
-export default function VideoIndex( { callback, mode }) {
+export default function VideoIndex( { callback, mode, loadingError }) {
 
 
 const [searchTerm, setSearchTerm] = useState("");
 const [videos, setVideos] = useState([])
-const [loadingError, setLoadingError] = useState(false)
 const [notes, setNotes] = useState([]);
 const [likeCount, setLikeCount] = useState(0);
 const [dislikeCount, setDislikeCount] = useState(0);
 
 
-
+let navigate = useNavigate()
 
 let arrayOfComments = []
 
@@ -26,27 +25,11 @@ const handleComments = (event) => {
   const commenterName = event.target.elements["commenter"].value;
   const commentText = event.target.elements["comment"].value;
   const newCommentNote = { commenter: commenterName, comment: commentText };
-  // student.notes.push(newCommentNote);
-  // setNotes([]);
   setNotes((notes) => [...notes, newCommentNote]);
   setLikeCount(0);
   setDislikeCount(0);
   event.target.reset();
 };
-
-// useEffect(() => {
-//   getAllVideos(searchTerm).then((response) => {
-//     console.log(response.items)
-//     setVideos(response.items)
-//     if (Object.keys(response).length === 0) {
-//       setLoadingError(true)
-//     } else {
-//       setLoadingError(false)
-//     }
-//   }).catch((error) => {
-//     setLoadingError(true)
-//   })
-// }, [searchTerm])
 
 
 const handleSearchInputChange = (event) => {
@@ -69,16 +52,12 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
  function getRandomInt(max) { return Math.floor(Math.random() * Math.floor(max)); }
 
 
- let count = 0
- let count2 = 0
-
-
   function like() {
-    count = 1
+
   }
 
   function dislike() {
-    count2 = 1
+   
   }
   
   const numComments = 3; 
@@ -93,6 +72,9 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
         return `${randomName} commented: ${randomMessage}.`;
       }
 
+      if(loadingError){
+        navigate("/error")
+      } else 
 
     return (
       <div style={{backgroundColor:!mode ? "white":"rgb(50,50,50)"}}>
@@ -132,36 +114,36 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
             <iframe src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
             </iframe>
             <div className="comment-section">
-            <h4>Leave a comment!</h4>
+            <h4 style={{color:!mode ? "black" : "white"}}>Leave a comment!</h4>
             <form className="comment" onSubmit={handleComments}>
-            <label htmlFor="Commenter Name">Your Name:</label>
+            <label htmlFor="Commenter Name" style={{color:!mode ? "black" : "white"}}>Your Name:</label>
             <input type="text" name="commenter" onChange={handleComments}/>
             <br></br>
-            <label htmlFor="Comment">Comment:</label>
+            <label htmlFor="Comment" style={{color:!mode ? "black" : "white"}}>Comment:</label>
             <input type="text" name="comment" onChange={handleComments}/>
             <br></br>
-            <button type="submit">Add Note</button>
+            <button type="submit" style={{color:!mode ? "black" : "blue"}}>Add Note</button>
             </form> 
             </div>
             <ul className="comments">
   {notes.map((note, index) => (
     <div key={index}>
-      <li>{note.commenter} commented: {note.comment}.</li>
+      <li style={{color:!mode ? "black" : "white"}}>{note.commenter} commented: {note.comment}.</li>
       <aside className="opinion">
-        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+      
         <button onClick={() => like()}>👍</button>
-        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+
         <button onClick={() => dislike()}>👎</button>
       </aside>
     </div>
   ))}
   {arrayOfComments.map((comment, index) => (
     <div key={index}>
-      <li>{comment}</li>
+      <li style={{color:!mode ? "black" : "white"}}>{comment}</li>
       <aside className="opinion">
-        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+       
         <button onClick={() => like()}>👍</button>
-        {Math.floor(Math.random() * (1000 - 1 + 1) + 1)}
+
         <button onClick={() => dislike()}>👎</button>
       </aside>
     </div>

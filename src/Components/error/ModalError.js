@@ -1,42 +1,32 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import './ModalError.css'
 
 function ModalError() {
-  const [open, setOpenModal] = useState(false)
+  const [show, setShow] = useState(true);
+  let navigate = useNavigate()
+
+  const handleClose = () => {
+    setShow(false)
+    navigate("/")
+  };
 
   return (
-    <div className="modalBackground">
+    <Modal show={show} onHide={handleClose} className="modalBackground">
     <div className="modalContainer">
       <div className="titleCloseBtn">
-        <button
-          onClick={() => {
-            setOpenModal(false);
-          }}
-        >
+        <button onClick={() => handleClose()}>
           X
         </button>
       </div>
       <div className="title">
-        <h1>Are You Sure You Want to Continue?</h1>
-      </div>
-      <div className="body">
-        <p>The next page looks amazing. Hope you want to go there!</p>
-      </div>
-      <div className="footer">
-        <button
-          onClick={() => {
-            setOpenModal(false);
-          }}
-          id="cancelBtn"
-        >
-          Cancel
-        </button>
-        <button>Continue</button>
-      </div>
+
+          <img src='./400error.png' alt='error' className='picerror'></img>
+
     </div>
-  </div>
+    </div>
+  </Modal>
   );
     }
 export default ModalError

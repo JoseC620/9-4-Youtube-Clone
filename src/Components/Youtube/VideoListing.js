@@ -1,20 +1,25 @@
 import { getAllVideos } from "../../api/fetch"
 import { useEffect, useState  } from "react"
+import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import "./VideoListing.css"
 
 
 
-export default function VideoListing({ search, mode }) {
+export default function VideoListing({ search, mode, callback }) {
 
 
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])
     const [searchTerm, setSearchTerm] = useState("");
+    const [place, setPlace] = useState()
+
+    let navigate = useNavigate()
+
 
 
     const handleSearchInputChange = (event) => {
-      setSearchTerm(event.target.value);
+      setPlace(event.target.value);
     };
     
     const handleSearchFormSubmit = (e) => {
@@ -23,18 +28,25 @@ export default function VideoListing({ search, mode }) {
       
     };
 
+    const handleSearch = () => {
+      setSearchTerm(place)
+    }
+
 
     useEffect(() => {
         getAllVideos(!searchTerm ? search: searchTerm).then((response) => {
-          console.log(response.items)
-          setVideos(response.items)
           if (Object.keys(response).length === 0) {
             setLoadingError(true)
+            callback(loadingError)
           } else {
             setLoadingError(false)
+            console.log(response.items)
+            setVideos(response.items)
           }
         }).catch((error) => {
           setLoadingError(true)
+          callback(loadingError)
+          navigate("/error")
         })
       }, [!searchTerm ? search: searchTerm])
 
@@ -49,11 +61,11 @@ export default function VideoListing({ search, mode }) {
           className="input2"
           type="text"
           placeholder="Search..."
-          value={searchTerm}
+          value={place}
           onChange={handleSearchInputChange}
         />
-        <Link to={`/Videos/Search/${searchTerm}`}>
-          <button className="button2" type="submit" style={{backgroundColor: !mode ? "green": "orange"}}>Go</button>
+        <Link to={`/Videos/Search/${place}`}>
+          <button className="button2" type="submit" style={{backgroundColor: !mode ? "green": "orange"}} onClick={handleSearch}>Go</button>
         </Link>
       </form>
     </div>

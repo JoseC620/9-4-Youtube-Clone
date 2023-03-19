@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./Navbar.css"
 
 export default function Navbar( { callback } ) {
 
-  const [mode, setMode] = useState()
+  const [mode, setMode] = useState(false)
 
-  callback(mode)
+  useEffect(() => {
+    callback(mode)
+  },[mode])
    
   return (
 
@@ -32,9 +34,12 @@ export default function Navbar( { callback } ) {
 
             </ul>
             <section className="darkButton">       
-            <label class="switch">
-            <input type="checkbox" onClick={() => {setMode(!mode)}}/>
-            <span class="slider round"></span>
+            <label className="switch">
+            <input type="checkbox" onClick={() => {
+              setMode(!mode)
+              
+              }}/>
+            <span className="slider round"></span>
             </label>
             <aside className="darkText">Dark Mode</aside>  
             </section>
