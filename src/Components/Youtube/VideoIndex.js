@@ -25,8 +25,8 @@ const handleComments = (event) => {
   const commentText = event.target.elements["comment"].value;
   const newCommentNote = { commenter: commenterName, comment: commentText };
   setNotes((notes) => [...notes, newCommentNote]);
-  setLikeCount(0);
-  setDislikeCount(0);
+  // setLikeCount(0);
+  // setDislikeCount(0);
   event.target.reset();
 };
 
