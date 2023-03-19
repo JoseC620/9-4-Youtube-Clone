@@ -1,8 +1,8 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./VideoIndex.css"
 import { Link, useNavigate } from "react-router-dom";
-import { getAllVideos } from "../../api/fetch";
+
 
 
 
@@ -10,10 +10,9 @@ export default function VideoIndex( { callback, mode, loadingError }) {
 
 
 const [searchTerm, setSearchTerm] = useState("");
-const [videos, setVideos] = useState([])
 const [notes, setNotes] = useState([]);
-const [likeCount, setLikeCount] = useState(0);
-const [dislikeCount, setDislikeCount] = useState(0);
+// const [likeCount, setLikeCount] = useState(0);
+// const [dislikeCount, setDislikeCount] = useState(0);
 
 
 let navigate = useNavigate()
@@ -52,13 +51,13 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
  function getRandomInt(max) { return Math.floor(Math.random() * Math.floor(max)); }
 
 
-  function like() {
+  // function like() {
 
-  }
+  // }
 
-  function dislike() {
+  // function dislike() {
    
-  }
+  // }
   
   const numComments = 3; 
   for (let i = 0; i < numComments; i++) { 
@@ -91,27 +90,13 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
           <button className="button2" type="submit" onClick={() => callback(searchTerm)} style={{backgroundColor: !mode ? "green": "orange"}}>Go</button>
         </Link>
       </form>
-      <section className="videoscroll">
-      {videos.map((video) => {
-            return (
-              <div key={video.id.videoId} >
-                  <br></br><br></br><br></br>
-                <Link to={`/Videos/play/${video.id.videoId}`}>
-
-                <img src={video.snippet.thumbnails.high.url} alt="box" width="230px" className="thumbnail2"></img>
-                <h3 className="text2">{video.snippet.title}</h3>
-                </Link>
-              </div>
-            )
-          })}
-      </section>
     </div>
            
 
         <div id="player">
           <br></br><br></br>
             <section className="stuff">
-            <iframe src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
+            <iframe title="myFrame"   src={`https://www.youtube.com/embed/${id}`} className="videoplayer">
             </iframe>
             <div className="comment-section">
             <h4 style={{color:!mode ? "black" : "white"}}>Leave a comment!</h4>
@@ -131,9 +116,9 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
       <li style={{color:!mode ? "black" : "white"}}>{note.commenter} commented: {note.comment}.</li>
       <aside className="opinion">
       
-        <button onClick={() => like()}>👍</button>
+        {/* <button onClick={() => like()}>👍</button>
 
-        <button onClick={() => dislike()}>👎</button>
+        <button onClick={() => dislike()}>👎</button> */}
       </aside>
     </div>
   ))}
@@ -142,9 +127,9 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
       <li style={{color:!mode ? "black" : "white"}}>{comment}</li>
       <aside className="opinion">
        
-        <button onClick={() => like()}>👍</button>
+        {/* <button onClick={() => like()}>👍</button>
 
-        <button onClick={() => dislike()}>👎</button>
+        <button onClick={() => dislike()}>👎</button> */}
       </aside>
     </div>
   ))}

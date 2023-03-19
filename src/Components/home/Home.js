@@ -29,6 +29,8 @@ export default function Home({ callback, mode }) {
       function handleSearch(){
         if(searchTerm === ""){
           setLoadingError(true)
+        } else if (loadingError){
+          setLoadingError(true)
         }
       }
     

@@ -52,7 +52,7 @@ export default function VideoListing({ search, mode, callback }) {
           callback(loadingError)
           navigate("/error")
         })
-      }, [!searchTerm ? search: searchTerm])
+      }, [callback,loadingError,navigate,search,searchTerm])
 
 
     return (
