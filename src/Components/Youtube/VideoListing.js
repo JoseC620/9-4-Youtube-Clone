@@ -20,6 +20,7 @@ export default function VideoListing({ search, mode }) {
     const handleSearchFormSubmit = (e) => {
       e.preventDefault();
       console.log(searchTerm);
+      
     };
 
 
