@@ -87,7 +87,7 @@ const messages = [ "Great video, thanks for sharing!", "I learned so much from t
           value={searchTerm}
           onChange={handleSearchInputChange}
         />
-        <Link to={`/Videos/Search/${searchTerm}`}>
+        <Link to={!searchTerm ? `/error` : (`/Videos/Search/${searchTerm}`)}>
           <button className="button2" type="submit" onClick={() => callback(searchTerm)} style={{backgroundColor: !mode ? "green": "orange"}}>Go</button>
         </Link>
       </form>

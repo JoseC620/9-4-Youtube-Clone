@@ -12,7 +12,7 @@ export default function VideoListing({ search, mode, callback }) {
     const [loadingError, setLoadingError] = useState(false)
     const [videos, setVideos] = useState([])
     const [searchTerm, setSearchTerm] = useState("");
-    const [place, setPlace] = useState()
+    const [place, setPlace] = useState("")
 
     let navigate = useNavigate()
 
@@ -30,15 +30,16 @@ export default function VideoListing({ search, mode, callback }) {
 
     const handleSearch = () => {
       setSearchTerm(place)
+      setPlace("")
     }
 
 
     useEffect(() => {
         getAllVideos(!searchTerm ? search: searchTerm).then((response) => {
-          if(response.error.code === 403){
-            navigate("/403")
-          }
-          if (Object.keys(response).length === 0) {
+          // if(response.error.code === 403){
+          //   navigate("/403")
+          // }
+         if (Object.keys(response).length === 0) {
             setLoadingError(true)
             callback(loadingError)
           } else {
@@ -67,7 +68,7 @@ export default function VideoListing({ search, mode, callback }) {
           value={place}
           onChange={handleSearchInputChange}
         />
-        <Link to={`/Videos/Search/${place}`}>
+        <Link to={!place ? `/error` : (`/Videos/Search/${place}`)}>
           <button className="button2" type="submit" style={{backgroundColor: !mode ? "green": "orange"}} onClick={handleSearch}>Go</button>
         </Link>
       </form>
