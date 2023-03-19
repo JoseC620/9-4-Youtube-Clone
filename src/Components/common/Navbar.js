@@ -8,7 +8,7 @@ export default function Navbar( { callback } ) {
 
   useEffect(() => {
     callback(mode)
-  },[mode])
+  },[mode,callback])
    
   return (
 
