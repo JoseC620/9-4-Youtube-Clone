@@ -31,7 +31,7 @@ export default function About( { mode } ) {
 
       <div className="about-wrapper" style={{ 
         backgroundImage: "url('/aboutbackground.jpg')",
-        filter: mode ? "brightness(60%)" : "none",
+        filter: mode ? "brightness(80%)" : "none",
       }}>
 
         <div className="about-container">
@@ -78,7 +78,7 @@ export default function About( { mode } ) {
               interface.
             </p>
           </div>
-          <h1>App Screenshots</h1>
+          {/* <h1>App Screenshots</h1>
           <div style={{ 
             filter: mode ? "brightness(100%)" : "brightness(100%)",
             }}>
@@ -89,7 +89,7 @@ export default function About( { mode } ) {
           <img src="./videoplayscreen.png" alt="Screenshotc" style={{ zIndex: "999" }} />
   
           </div>
-          </div>
+          </div> */}
     
           <div className="team"><br></br><br></br>
             <h1>Meet the Team</h1>
