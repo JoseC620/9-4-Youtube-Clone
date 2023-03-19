@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
-import './ModalError.css'
+import './FourThreeError.css'
 
-function ModalError() {
+function FourThreeError() {
   const [show, setShow] = useState(true);
   let navigate = useNavigate()
 
@@ -21,10 +21,10 @@ function ModalError() {
         </button>
       </div>
       <div className="title">
-          <img src='./400error.png' alt='error' className='picerror'></img>
+          <img src='./403error.jpg' alt='error' className='picerror403'></img>
     </div>
     </div>
   </Modal>
   );
     }
-export default ModalError
+export default FourThreeError

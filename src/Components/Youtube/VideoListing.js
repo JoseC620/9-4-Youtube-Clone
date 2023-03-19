@@ -35,6 +35,9 @@ export default function VideoListing({ search, mode, callback }) {
 
     useEffect(() => {
         getAllVideos(!searchTerm ? search: searchTerm).then((response) => {
+          if(response.error.code === 403){
+            navigate("/403")
+          }
           if (Object.keys(response).length === 0) {
             setLoadingError(true)
             callback(loadingError)
