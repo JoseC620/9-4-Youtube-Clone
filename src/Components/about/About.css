@@ -46,22 +46,23 @@ body {
 .team-members {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .member-card {
   width: 40%;
   margin-bottom: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 20px;
+  margin-right: 90px;
 }
 
-.member-card h2 {
+/* .member-card h2 {
   font-size: 24px;
   margin-bottom: 10px;
-}
+} */
 
 .member-card p {
+  text-align: justify;
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -88,15 +89,16 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   margin-top: 50px;
-  padding: 20px 20px;
+  padding: 20px 80px;
 }
 
 .app-screenshots img {
   z-index: 9999;
   filter: brightness(1);
-  width: 100%;
-  height: 250px;
-  
+  width: 95%;
+  height: 100%;
+  /* border: 5px solid #555; */
+  /* padding: 0px; */
 }
 
 .img {
