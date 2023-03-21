@@ -5,7 +5,6 @@ import Home from './Components/home/Home';
 import About from './Components/about/About';
 import VideoIndex from './Components/Youtube/VideoIndex';
 import ModalError from './Components/error/ModalError';
-import FourThreeError from './Components/error/FourThreeError';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useState } from 'react';
 
@@ -23,7 +22,6 @@ function App() {
         <Navbar callback={setMode}/>
           <Routes>
             <Route path='/error' element={<ModalError />}/>
-            <Route path='/403' element={<FourThreeError />}/>
             <Route path="/" element={<Home callback={setSearch} mode={mode} loadingError={loadingError}/>} />
             <Route path="/About" element={<About mode={mode}/>} />
             <Route path='/Videos/play/:id' element={<VideoIndex callback={setSearch} mode={mode} />} />
