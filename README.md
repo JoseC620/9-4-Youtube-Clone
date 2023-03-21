@@ -67,7 +67,7 @@ I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google
 
 <a href="https://beautiful-selkie.netlify.app" target="_blank">YouTube Clone</a>
 
-<a href="http://github.com/mark-robertson67" target="_blank">GitHub</a>
+<a href="https://github.com/MarkRobertson67" target="_blank">GitHub</a>
 
 
 <!-- [Trello Board link](https://trello.com/b/R929oK85/untitled-board){:target="_blank"} -->
