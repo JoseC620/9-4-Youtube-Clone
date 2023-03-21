@@ -61,6 +61,10 @@ I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google
 I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google-funded software engineering fellowship with a 9% acceptance rate whose graduates have been hired as developers at leading companies such as Pinterest, JP Morgan, Citi, Spotify, and Blackstone. I'm currently learning React, having already studied JavaScript, HTML & CSS and I am training to become a software engineer so that I can solve real-world problems. When I'm not coding, I enjoy movies, watching Formula 1 racing, music, travel and playing with my German Shepherd. Being a Pursuit Fellow will give me the foundation to go on and learn new and exciting languages such as Python, C++, C# et al. that I would like to use both personally and professionally. My first personal project will be to design and implement a quantitative trading algorithm that I can run through an API to a trading platform. I would very much enjoy working for a start-up (as I have start-up experience) or even a large financial firm, as my experience up until Pursuit has been in the financial markets.
 
 <!-- [GitHub](https://github.com/mark-robertson){:target="_blank"} -->
+<!-- https://beautiful-selkie.netlify.app/ -->
+
+<a href="https://beautiful-selkie.netlify.app" target="_blank">YouTube Clone</a>
+
 <a href="http://github.com/mark-robertson" target="_blank">GitHub</a>
 
 
