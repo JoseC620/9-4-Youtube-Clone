@@ -4,6 +4,8 @@
 
 <img src="./public/ytlogo.png" alt="YOUTUBE logo" width="10%" title="Our YouTube Clone">
 
+<a href="https://beautiful-selkie.netlify.app" target="_blank">Click here - YouTube Clone</a>
+
 Our project is a video search and viewing app, YouTube clone, that allows users to search for videos and play them within the app. The app has a simple and intuitive user interface, which includes a search bar on the home page that allows users to get a list of videos based on their search criteria. Users can click on a video thumbnail to play the video they are interested in and share the link to the individual video with others.
 
 The app also includes an "About" page where users can learn about the project and its developers. This page contains a brief project description, as well as a short bio for each teammate and links to their GitHub accounts. The "About" page can be accessed through the navigation bar that appears on every page of the app.
