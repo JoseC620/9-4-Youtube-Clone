@@ -55,7 +55,7 @@ Our app is built using JSX to create components, and we have committed to using 
 I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google-funded software engineering fellowship with a 9% acceptance rate whose graduates have been hired as developers at leading companies such as Pinterest, JP Morgan, Citi, Spotify, and Blackstone. I'm currently learning React, having already studied JavaScript, HTML & CSS and I am training to become a software engineer so that I can solve real-world problems.
 
 <!-- [GitHub](https://github.com/jose-cepeda){:target="_blank rel="noopener"} -->
-<a href="http://github.com/jose-cepeda" target="_blank">GitHub</a>
+<a href="http://github.com/JoseC620" target="_blank">GitHub</a>
 <br></br>
 
 ### Mark Roberston
@@ -67,7 +67,7 @@ I'm currently a Full Stack Web Development Fellow at Pursuit, a 12-month, Google
 
 <a href="https://beautiful-selkie.netlify.app" target="_blank">YouTube Clone</a>
 
-<a href="http://github.com/mark-robertson" target="_blank">GitHub</a>
+<a href="http://github.com/mark-robertson67" target="_blank">GitHub</a>
 
 
 <!-- [Trello Board link](https://trello.com/b/R929oK85/untitled-board){:target="_blank"} -->
