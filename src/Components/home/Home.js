@@ -43,7 +43,7 @@ export default function Home({ callback, mode }) {
       function pleaseSubmit() {
         return(
           <div>
-            <h3>Please submit a search!</h3>
+            <h3 style={{color:!mode ? "black" : "white"}}>Please submit a search!</h3>
           </div>
         )
       }
